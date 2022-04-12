@@ -1,0 +1,251 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L OMEGA2_:OMEGA2+ U1
+U 1 1 6255C1E2
+P 2750 2500
+F 0 "U1" H 2800 4267 50  0000 C CNN
+F 1 "OMEGA2+" H 2800 4176 50  0000 C CNN
+F 2 "Module:Onion_Omega2+" H 2750 2500 50  0001 L BNN
+F 3 "" H 2750 2500 50  0001 L BNN
+F 4 "32MB" H 2750 2500 50  0001 L BNN "FLASH"
+F 5 "128MB" H 2750 2500 50  0001 L BNN "RAM"
+	1    2750 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62565D63
+P 4350 1000
+F 0 "#PWR?" H 4350 750 50  0001 C CNN
+F 1 "GND" H 4355 827 50  0000 C CNN
+F 2 "" H 4350 1000 50  0001 C CNN
+F 3 "" H 4350 1000 50  0001 C CNN
+	1    4350 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 625662CE
+P 1200 1050
+F 0 "#PWR?" H 1200 800 50  0001 C CNN
+F 1 "GND" H 1205 877 50  0000 C CNN
+F 2 "" H 1200 1050 50  0001 C CNN
+F 3 "" H 1200 1050 50  0001 C CNN
+	1    1200 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 1200 4150 900 
+Wire Wire Line
+	4150 900  4350 900 
+Wire Wire Line
+	4350 900  4350 1000
+Wire Wire Line
+	1450 1200 1350 1200
+Wire Wire Line
+	1200 950  1200 1050
+Wire Wire Line
+	1350 1200 1350 950 
+Wire Wire Line
+	1350 950  1200 950 
+$Comp
+L power:+3V3 #PWR?
+U 1 1 625678FD
+P 4650 1100
+F 0 "#PWR?" H 4650 950 50  0001 C CNN
+F 1 "+3V3" H 4665 1273 50  0000 C CNN
+F 2 "" H 4650 1100 50  0001 C CNN
+F 3 "" H 4650 1100 50  0001 C CNN
+	1    4650 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 1300 4650 1300
+Wire Wire Line
+	4650 1300 4650 1100
+$Comp
+L power:+2V5 #PWR?
+U 1 1 625686F9
+P 950 1100
+F 0 "#PWR?" H 950 950 50  0001 C CNN
+F 1 "+2V5" H 965 1273 50  0000 C CNN
+F 2 "" H 950 1100 50  0001 C CNN
+F 3 "" H 950 1100 50  0001 C CNN
+	1    950  1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 1300 950  1300
+Wire Wire Line
+	950  1300 950  1100
+Text GLabel 1200 1400 0    50   BiDi ~ 0
+IO26
+Text GLabel 1200 1500 0    50   BiDi ~ 0
+IO23
+Text GLabel 1200 1700 0    50   BiDi ~ 0
+IO16
+Text GLabel 1200 1900 0    50   BiDi ~ 0
+IO14
+Text GLabel 1200 2000 0    50   BiDi ~ 0
+IO13
+Text GLabel 1200 2100 0    50   BiDi ~ 0
+IO12
+Text GLabel 1200 2200 0    50   BiDi ~ 0
+IO8
+Text GLabel 1200 2300 0    50   BiDi ~ 0
+IO7
+Text GLabel 1200 2400 0    50   BiDi ~ 0
+IO6
+Text GLabel 1200 2500 0    50   BiDi ~ 0
+IO1
+Text GLabel 1200 2600 0    50   BiDi ~ 0
+IO0
+Text GLabel 1200 2700 0    50   BiDi ~ 0
+RST_B
+Wire Wire Line
+	1450 1400 1200 1400
+Wire Wire Line
+	1450 1500 1200 1500
+Wire Wire Line
+	1450 1700 1200 1700
+Wire Wire Line
+	1450 1900 1200 1900
+Wire Wire Line
+	1450 2000 1200 2000
+Wire Wire Line
+	1450 2100 1200 2100
+Wire Wire Line
+	1450 2200 1200 2200
+Wire Wire Line
+	1450 2300 1200 2300
+Wire Wire Line
+	1450 2400 1200 2400
+Wire Wire Line
+	1450 2500 1200 2500
+Wire Wire Line
+	1450 2600 1200 2600
+Wire Wire Line
+	1450 2700 1200 2700
+Text GLabel 4550 1800 2    50   BiDi ~ 0
+RST_BTN
+Text GLabel 4550 2700 2    50   BiDi ~ 0
+IO21
+Text GLabel 4550 2600 2    50   BiDi ~ 0
+IO20
+Text GLabel 4550 2500 2    50   BiDi ~ 0
+IO19
+Text GLabel 4550 2400 2    50   BiDi ~ 0
+IO18
+Text GLabel 4550 2300 2    50   BiDi ~ 0
+RX+
+Text GLabel 4550 2200 2    50   BiDi ~ 0
+RX-
+Text GLabel 4550 2100 2    50   BiDi ~ 0
+TX+
+Text GLabel 4550 2000 2    50   BiDi ~ 0
+TX-
+Text GLabel 4550 1900 2    50   BiDi ~ 0
+NET_POW
+Text GLabel 4550 1500 2    50   BiDi ~ 0
+USB_N
+Text GLabel 4550 1400 2    50   BiDi ~ 0
+USB_P
+Wire Wire Line
+	4150 1400 4550 1400
+Wire Wire Line
+	4150 1500 4550 1500
+Wire Wire Line
+	4150 1800 4550 1800
+Wire Wire Line
+	4150 1900 4550 1900
+Wire Wire Line
+	4150 2000 4550 2000
+Wire Wire Line
+	4150 2100 4550 2100
+Wire Wire Line
+	4150 2200 4550 2200
+Wire Wire Line
+	4150 2300 4550 2300
+Wire Wire Line
+	4150 2400 4550 2400
+Wire Wire Line
+	4150 2500 4550 2500
+Wire Wire Line
+	4150 2600 4550 2600
+Wire Wire Line
+	4150 2700 4550 2700
+$Comp
+L INVERTER:INVERTER U?
+U 1 1 6257766C
+P 6950 1200
+F 0 "U?" H 6950 1565 50  0000 C CNN
+F 1 "INVERTER" H 6950 1474 50  0000 C CNN
+F 2 "" H 6850 1350 50  0001 C CNN
+F 3 "" H 6850 1350 50  0001 C CNN
+	1    6950 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 62582F5A
+P 7550 1100
+F 0 "#PWR?" H 7550 950 50  0001 C CNN
+F 1 "VCC" H 7565 1273 50  0000 C CNN
+F 2 "" H 7550 1100 50  0001 C CNN
+F 3 "" H 7550 1100 50  0001 C CNN
+	1    7550 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 1100 7300 1100
+$Comp
+L power:GND #PWR?
+U 1 1 62584148
+P 7550 1400
+F 0 "#PWR?" H 7550 1150 50  0001 C CNN
+F 1 "GND" H 7555 1227 50  0000 C CNN
+F 2 "" H 7550 1400 50  0001 C CNN
+F 3 "" H 7550 1400 50  0001 C CNN
+	1    7550 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 1350 7550 1350
+Wire Wire Line
+	7550 1350 7550 1400
+$Comp
+L Device:C C?
+U 1 1 62585139
+P 7900 1250
+F 0 "C?" H 8015 1296 50  0000 L CNN
+F 1 "1u" H 8015 1205 50  0000 L CNN
+F 2 "" H 7938 1100 50  0001 C CNN
+F 3 "~" H 7900 1250 50  0001 C CNN
+	1    7900 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 1100 7550 1100
+Connection ~ 7550 1100
+Wire Wire Line
+	7900 1400 7550 1400
+Connection ~ 7550 1400
+Text GLabel 6300 1300 0    50   BiDi ~ 0
+IO16
+Wire Wire Line
+	6600 1300 6300 1300
+$EndSCHEMATC
