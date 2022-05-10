@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L OMEGA2_:OMEGA2+ U1
+L hardware_SI-rescue:OMEGA2+-OMEGA2_ U1
 U 1 1 6255C1E2
 P 2750 2500
 F 0 "U1" H 2800 4267 50  0000 C CNN
@@ -189,7 +189,7 @@ Wire Wire Line
 Wire Wire Line
 	4150 2700 4550 2700
 $Comp
-L INVERTER:INVERTER U?
+L hardware_SI-rescue:INVERTER-INVERTER U?
 U 1 1 6257766C
 P 1500 6050
 F 0 "U?" H 1500 6415 50  0000 C CNN
@@ -537,7 +537,7 @@ Wire Wire Line
 Wire Wire Line
 	3200 4750 3650 4750
 $Comp
-L MCP3021:MCP3021 U?
+L hardware_SI-rescue:MCP3021-MCP3021 U?
 U 1 1 62577E1D
 P 6200 2150
 F 0 "U?" H 6200 2150 50  0001 L BNN
@@ -749,4 +749,376 @@ Wire Wire Line
 	3400 7400 3150 7400
 Wire Wire Line
 	4150 7400 4300 7400
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 6259C321
+P 10150 3500
+F 0 "J?" H 10207 3967 50  0000 C CNN
+F 1 "USB_B_Micro" H 10207 3876 50  0000 C CNN
+F 2 "" H 10300 3450 50  0001 C CNN
+F 3 "~" H 10300 3450 50  0001 C CNN
+	1    10150 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6259D654
+P 10100 4050
+F 0 "#PWR?" H 10100 3800 50  0001 C CNN
+F 1 "GND" H 10105 3877 50  0000 C CNN
+F 2 "" H 10100 4050 50  0001 C CNN
+F 3 "" H 10100 4050 50  0001 C CNN
+	1    10100 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 4050 10050 4050
+Wire Wire Line
+	10050 4050 10050 3900
+Wire Wire Line
+	10150 3900 10150 4050
+Wire Wire Line
+	10150 4050 10100 4050
+Connection ~ 10100 4050
+Text GLabel 10600 3500 2    50   Input ~ 0
+USB_P
+Text GLabel 10750 3650 2    50   Input ~ 0
+USB_N
+NoConn ~ 10450 3700
+Wire Wire Line
+	10750 3650 10450 3650
+Wire Wire Line
+	10450 3650 10450 3600
+Wire Wire Line
+	10600 3500 10450 3500
+$Comp
+L Regulator_Linear:LD1117S33TR_SOT223 U?
+U 1 1 625B610D
+P 10400 4700
+F 0 "U?" H 10400 4942 50  0000 C CNN
+F 1 "LD1117S33TR_SOT223" H 10400 4851 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 10400 4900 50  0001 C CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" H 10500 4450 50  0001 C CNN
+	1    10400 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 625B6F3A
+P 10400 5100
+F 0 "#PWR?" H 10400 4850 50  0001 C CNN
+F 1 "GND" H 10405 4927 50  0000 C CNN
+F 2 "" H 10400 5100 50  0001 C CNN
+F 3 "" H 10400 5100 50  0001 C CNN
+	1    10400 5100
+	1    0    0    -1  
+$EndComp
+Text GLabel 10700 3300 2    50   Input ~ 0
+Vin_1
+Wire Wire Line
+	10700 3300 10450 3300
+Text GLabel 9900 4700 0    50   Input ~ 0
+Vin_1
+Wire Wire Line
+	10100 4700 10000 4700
+Text GLabel 10850 4700 2    50   Input ~ 0
+Vo_1
+Wire Wire Line
+	10700 4700 10750 4700
+$Comp
+L Device:C C?
+U 1 1 625E601D
+P 10000 4900
+F 0 "C?" H 10115 4946 50  0000 L CNN
+F 1 "100n" H 10115 4855 50  0000 L CNN
+F 2 "" H 10038 4750 50  0001 C CNN
+F 3 "~" H 10000 4900 50  0001 C CNN
+	1    10000 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 625EA205
+P 10750 4850
+F 0 "C?" H 10865 4896 50  0000 L CNN
+F 1 "10u" H 10865 4805 50  0000 L CNN
+F 2 "" H 10788 4700 50  0001 C CNN
+F 3 "~" H 10750 4850 50  0001 C CNN
+	1    10750 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 4750 10000 4700
+Connection ~ 10000 4700
+Wire Wire Line
+	10000 4700 9900 4700
+Wire Wire Line
+	10000 5050 10400 5050
+Wire Wire Line
+	10400 5000 10400 5050
+Connection ~ 10400 5050
+Wire Wire Line
+	10400 5050 10400 5100
+Connection ~ 10750 4700
+Wire Wire Line
+	10750 4700 10850 4700
+Wire Wire Line
+	10750 5000 10750 5050
+Wire Wire Line
+	10750 5050 10400 5050
+$Comp
+L Regulator_Linear:LD1117S33TR_SOT223 U?
+U 1 1 6260C13D
+P 10450 5750
+F 0 "U?" H 10450 5992 50  0000 C CNN
+F 1 "LD1117S33TR_SOT223" H 10450 5901 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 10450 5950 50  0001 C CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" H 10550 5500 50  0001 C CNN
+	1    10450 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6260C143
+P 10450 6150
+F 0 "#PWR?" H 10450 5900 50  0001 C CNN
+F 1 "GND" H 10455 5977 50  0000 C CNN
+F 2 "" H 10450 6150 50  0001 C CNN
+F 3 "" H 10450 6150 50  0001 C CNN
+	1    10450 6150
+	1    0    0    -1  
+$EndComp
+Text GLabel 9950 5750 0    50   Input ~ 0
+Vin_2
+Wire Wire Line
+	10150 5750 10050 5750
+Text GLabel 10900 5750 2    50   Input ~ 0
+Vo_2
+Wire Wire Line
+	10750 5750 10800 5750
+$Comp
+L Device:C C?
+U 1 1 6260C14D
+P 10050 5950
+F 0 "C?" H 10165 5996 50  0000 L CNN
+F 1 "100n" H 10165 5905 50  0000 L CNN
+F 2 "" H 10088 5800 50  0001 C CNN
+F 3 "~" H 10050 5950 50  0001 C CNN
+	1    10050 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6260C153
+P 10800 5900
+F 0 "C?" H 10915 5946 50  0000 L CNN
+F 1 "10u" H 10915 5855 50  0000 L CNN
+F 2 "" H 10838 5750 50  0001 C CNN
+F 3 "~" H 10800 5900 50  0001 C CNN
+	1    10800 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 5800 10050 5750
+Connection ~ 10050 5750
+Wire Wire Line
+	10050 5750 9950 5750
+Wire Wire Line
+	10050 6100 10450 6100
+Wire Wire Line
+	10450 6050 10450 6100
+Connection ~ 10450 6100
+Wire Wire Line
+	10450 6100 10450 6150
+Connection ~ 10800 5750
+Wire Wire Line
+	10800 5750 10900 5750
+Wire Wire Line
+	10800 6050 10800 6100
+Wire Wire Line
+	10800 6100 10450 6100
+$Comp
+L Device:LED D?
+U 1 1 62616AB0
+P 8950 5600
+F 0 "D?" V 8989 5482 50  0000 R CNN
+F 1 "LED" V 8898 5482 50  0000 R CNN
+F 2 "" H 8950 5600 50  0001 C CNN
+F 3 "~" H 8950 5600 50  0001 C CNN
+	1    8950 5600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 626180AC
+P 8950 5100
+F 0 "R?" H 9020 5146 50  0000 L CNN
+F 1 "1k" H 9020 5055 50  0000 L CNN
+F 2 "" V 8880 5100 50  0001 C CNN
+F 3 "~" H 8950 5100 50  0001 C CNN
+	1    8950 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62618AF9
+P 8600 5950
+F 0 "#PWR?" H 8600 5700 50  0001 C CNN
+F 1 "GND" H 8605 5777 50  0000 C CNN
+F 2 "" H 8600 5950 50  0001 C CNN
+F 3 "" H 8600 5950 50  0001 C CNN
+	1    8600 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 6261A3B0
+P 8600 5600
+F 0 "D?" V 8639 5482 50  0000 R CNN
+F 1 "LED" V 8548 5482 50  0000 R CNN
+F 2 "" H 8600 5600 50  0001 C CNN
+F 3 "~" H 8600 5600 50  0001 C CNN
+	1    8600 5600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6261A3B6
+P 8600 5100
+F 0 "R?" H 8670 5146 50  0000 L CNN
+F 1 "1k" H 8670 5055 50  0000 L CNN
+F 2 "" V 8530 5100 50  0001 C CNN
+F 3 "~" H 8600 5100 50  0001 C CNN
+	1    8600 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 6261F895
+P 8200 5600
+F 0 "D?" V 8239 5482 50  0000 R CNN
+F 1 "LED" V 8148 5482 50  0000 R CNN
+F 2 "" H 8200 5600 50  0001 C CNN
+F 3 "~" H 8200 5600 50  0001 C CNN
+	1    8200 5600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6261F89B
+P 8200 5100
+F 0 "R?" H 8270 5146 50  0000 L CNN
+F 1 "1k" H 8270 5055 50  0000 L CNN
+F 2 "" V 8130 5100 50  0001 C CNN
+F 3 "~" H 8200 5100 50  0001 C CNN
+	1    8200 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 5750 8950 5900
+Wire Wire Line
+	8950 5900 8600 5900
+Wire Wire Line
+	8600 5750 8600 5900
+Connection ~ 8600 5900
+Wire Wire Line
+	8600 5900 8600 5950
+Wire Wire Line
+	8200 5750 8200 5900
+Wire Wire Line
+	8200 5900 8600 5900
+Wire Wire Line
+	8950 5450 8950 5250
+Wire Wire Line
+	8600 5450 8600 5250
+Wire Wire Line
+	8200 5450 8200 5250
+Text GLabel 8950 4750 1    50   Input ~ 0
+Res_Con
+Text GLabel 8600 4750 1    50   Input ~ 0
+Bic_Con
+Text GLabel 8200 4750 1    50   Input ~ 0
+Lib_Con
+Wire Wire Line
+	8950 4950 8950 4750
+Wire Wire Line
+	8600 4950 8600 4750
+Wire Wire Line
+	8200 4950 8200 4750
+$Comp
+L Connector_Generic:Conn_01x04 J?
+U 1 1 626739F7
+P 10500 2400
+F 0 "J?" H 10580 2392 50  0000 L CNN
+F 1 "Conn_01x04" H 10580 2301 50  0000 L CNN
+F 2 "" H 10500 2400 50  0001 C CNN
+F 3 "~" H 10500 2400 50  0001 C CNN
+	1    10500 2400
+	1    0    0    -1  
+$EndComp
+Text Label 10450 2050 0    50   ~ 0
+LCD
+$Comp
+L power:GND #PWR?
+U 1 1 626773C0
+P 9950 2300
+F 0 "#PWR?" H 9950 2050 50  0001 C CNN
+F 1 "GND" V 9955 2172 50  0000 R CNN
+F 2 "" H 9950 2300 50  0001 C CNN
+F 3 "" H 9950 2300 50  0001 C CNN
+	1    9950 2300
+	0    1    1    0   
+$EndComp
+Text GLabel 10000 2400 0    50   Input ~ 0
+Vcc
+Text GLabel 10000 2500 0    50   Input ~ 0
+SCL
+Text GLabel 10000 2600 0    50   Input ~ 0
+SDA
+Wire Wire Line
+	9950 2300 10300 2300
+Wire Wire Line
+	10000 2400 10300 2400
+Wire Wire Line
+	10000 2500 10300 2500
+Wire Wire Line
+	10000 2600 10300 2600
+$Comp
+L Power_Supervisor:MAX6369 U?
+U 1 1 6269B4DF
+P 6100 5100
+F 0 "U?" H 6544 5146 50  0000 L CNN
+F 1 "MAX6369" H 6544 5055 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-8" H 6750 4650 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX6369-MAX6374.pdf" H 6250 5600 50  0001 C CNN
+	1    6100 5100
+	1    0    0    -1  
+$EndComp
+Text Label 5700 4400 0    50   ~ 0
+Watchdog
+Text GLabel 6700 4900 2    50   Input ~ 0
+RST_W
+Wire Wire Line
+	6500 4900 6700 4900
+Text GLabel 6100 4450 1    50   Input ~ 0
+Vin
+Wire Wire Line
+	6100 4600 6100 4450
+$Comp
+L power:GND #PWR?
+U 1 1 626ABF91
+P 6100 5750
+F 0 "#PWR?" H 6100 5500 50  0001 C CNN
+F 1 "GND" H 6105 5577 50  0000 C CNN
+F 2 "" H 6100 5750 50  0001 C CNN
+F 3 "" H 6100 5750 50  0001 C CNN
+	1    6100 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 5750 6100 5600
+Text GLabel 5450 4900 0    50   Input ~ 0
+Clk_W
+Wire Wire Line
+	5450 4900 5700 4900
 $EndSCHEMATC
