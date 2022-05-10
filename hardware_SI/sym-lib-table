@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name "hardware_SI-rescue")(type "Legacy")(uri "${KIPRJMOD}/hardware_SI-rescue.lib")(options "")(descr ""))
+  (lib (name "LTC4085EDEPBF")(type "Legacy")(uri "${KIPRJMOD}/LTC4085EDEPBF/LTC4085EDEPBF.lib")(options "")(descr ""))
+  (lib (name "INVERTER")(type "Legacy")(uri "${KIPRJMOD}/INVERTER/INVERTER.lib")(options "")(descr ""))
+  (lib (name "MCP3021")(type "Legacy")(uri "${KIPRJMOD}/MCP3021/MCP3021.lib")(options "")(descr ""))
+  (lib (name "OMEGA2_")(type "Legacy")(uri "${KIPRJMOD}/OMEGA2/OMEGA2_.lib")(options "")(descr ""))
+)
