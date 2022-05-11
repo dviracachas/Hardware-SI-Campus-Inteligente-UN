@@ -413,6 +413,18 @@
     [
       "86c0acae-f979-431b-bbb5-f99ee549438f",
       ""
+    ],
+    [
+      "d17f886c-ddbc-4da5-b4ad-887fd41c7d7b",
+      "sistema_alimentacion"
+    ],
+    [
+      "0b6e3c2b-d039-4782-bbc3-fab07ed657e7",
+      "perifericos"
+    ],
+    [
+      "5100f047-51fe-4bd1-8576-7ad51d65cc07",
+      "manejo_bateria"
     ]
   ],
   "text_variables": {}
