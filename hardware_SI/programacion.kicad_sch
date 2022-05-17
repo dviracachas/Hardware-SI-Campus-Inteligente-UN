@@ -881,7 +881,6 @@
     )
   )
 
-
   (junction (at 85.09 99.06) (diameter 0) (color 0 0 0 0)
     (uuid 1304c7ad-8d7a-46a1-9b08-3242f3802f71)
   )
@@ -1181,7 +1180,7 @@
     (uuid 46dc8b71-656c-468b-90ed-7b333fd4b86b)
     (property "Reference" "R16" (id 0) (at 199.39 83.82 90))
     (property "Value" "1k" (id 1) (at 199.39 81.28 90))
-    (property "Footprint" "" (id 2) (at 199.39 79.502 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (id 2) (at 199.39 79.502 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 199.39 81.28 0)
@@ -1228,7 +1227,7 @@
     (uuid 8f025fd3-0eaf-44cb-ac32-fb3b91404f49)
     (property "Reference" "R15" (id 0) (at 199.39 76.2 90))
     (property "Value" "1k" (id 1) (at 199.39 78.74 90))
-    (property "Footprint" "" (id 2) (at 199.39 76.962 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (id 2) (at 199.39 76.962 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 199.39 78.74 0)
