@@ -356,7 +356,6 @@
     )
   )
 
-
   (junction (at 138.43 104.14) (diameter 0) (color 0 0 0 0)
     (uuid 160c545c-aeea-4609-affa-b14650d69248)
   )
@@ -665,7 +664,7 @@
     (property "Value" "MCP3021" (id 1) (at 199.39 97.79 0)
       (effects (font (size 1.27 1.27)) (justify left bottom) hide)
     )
-    (property "Footprint" "SOT95P270X145-5N" (id 2) (at 199.39 97.79 0)
+    (property "Footprint" "MCP3021A5T-E_OT:SOT95P270X145-5N" (id 2) (at 199.39 97.79 0)
       (effects (font (size 1.27 1.27)) (justify left bottom) hide)
     )
     (property "Datasheet" "" (id 3) (at 199.39 97.79 0)

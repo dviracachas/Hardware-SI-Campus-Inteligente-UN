@@ -307,7 +307,6 @@
     )
   )
 
-
   (junction (at 189.23 76.2) (diameter 0) (color 0 0 0 0)
     (uuid cab37cd3-58ef-4368-8e3c-f16420c9c934)
   )
@@ -833,7 +832,7 @@
     (property "Value" "100n" (id 1) (at 199.39 82.5499 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (id 2) (at 196.5452 85.09 0)
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (id 2) (at 196.5452 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 195.58 81.28 0)
@@ -1121,7 +1120,7 @@
       (reference "BT1") (unit 1) (value "3.7V") (footprint "Battery:BatteryHolder_MPD_BH-18650-PC2")
     )
     (path "/df5c0c0e-e65c-407d-8d2c-4e4d971d84fc"
-      (reference "C1") (unit 1) (value "100n") (footprint "")
+      (reference "C1") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/d17f886c-ddbc-4da5-b4ad-887fd41c7d7b/79dd93ce-0c87-43fa-8fcb-da2290bc2344"
       (reference "C2") (unit 1) (value "4.7uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
@@ -1142,7 +1141,7 @@
       (reference "C7") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/d17f886c-ddbc-4da5-b4ad-887fd41c7d7b/0cf6864d-eb0b-44a4-8430-c2d70446e5de"
-      (reference "C8") (unit 1) (value "100n") (footprint "")
+      (reference "C8") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/d17f886c-ddbc-4da5-b4ad-887fd41c7d7b/5b4d42a4-f57c-4b7c-a0ea-40675900a8cc"
       (reference "C9") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
@@ -1154,10 +1153,10 @@
       (reference "C11") (unit 1) (value "10u") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/0b6e3c2b-d039-4782-bbc3-fab07ed657e7/fc4f2d85-95e6-494e-ad8e-549d8dc8a347"
-      (reference "C12") (unit 1) (value "100n") (footprint "")
+      (reference "C12") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/0b6e3c2b-d039-4782-bbc3-fab07ed657e7/05cf4233-8f27-418a-a330-7ad49b161d28"
-      (reference "C13") (unit 1) (value "100n") (footprint "")
+      (reference "C13") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/5100f047-51fe-4bd1-8576-7ad51d65cc07/a9c7380b-fd51-40e0-9090-6a5b91919810"
       (reference "C14") (unit 1) (value "100nF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
@@ -1256,10 +1255,10 @@
       (reference "R14") (unit 1) (value "8M") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/c5476bbc-f11c-4b73-abe0-40bb556a0d31/8f025fd3-0eaf-44cb-ac32-fb3b91404f49"
-      (reference "R15") (unit 1) (value "1k") (footprint "")
+      (reference "R15") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/c5476bbc-f11c-4b73-abe0-40bb556a0d31/46dc8b71-656c-468b-90ed-7b333fd4b86b"
-      (reference "R16") (unit 1) (value "1k") (footprint "")
+      (reference "R16") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/d17f886c-ddbc-4da5-b4ad-887fd41c7d7b/ab8397f0-cb8b-42a3-97b6-8f2bb790bc88"
       (reference "SW1") (unit 1) (value "SW_SPDT") (footprint "Button_Switch_THT:SW_CuK_OS102011MA1QN1_SPDT_Angled")
@@ -1283,7 +1282,7 @@
       (reference "U5") (unit 1) (value "MAX6369") (footprint "Package_TO_SOT_SMD:SOT-23-8")
     )
     (path "/5100f047-51fe-4bd1-8576-7ad51d65cc07/c3617d4b-43cd-435a-a463-91a105f5bb7d"
-      (reference "U6") (unit 1) (value "MCP3021") (footprint "SOT95P270X145-5N")
+      (reference "U6") (unit 1) (value "MCP3021") (footprint "MCP3021A5T-E_OT:SOT95P270X145-5N")
     )
     (path "/c5476bbc-f11c-4b73-abe0-40bb556a0d31/f1b1be8e-77a3-403b-a3de-1117b066b8c9"
       (reference "U7") (unit 1) (value "USBLC6-2SC6") (footprint "Package_TO_SOT_SMD:SOT-23-6")

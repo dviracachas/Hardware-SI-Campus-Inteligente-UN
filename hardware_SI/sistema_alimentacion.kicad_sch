@@ -1471,7 +1471,6 @@
     )
   )
 
-
   (junction (at 85.09 143.51) (diameter 0) (color 0 0 0 0)
     (uuid 01fb2a31-a822-4ca3-8588-dafa8c1f274e)
   )
@@ -2132,7 +2131,7 @@
     (property "Value" "100n" (id 1) (at 143.51 31.7499 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (id 2) (at 138.7348 26.67 0)
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (id 2) (at 138.7348 26.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 139.7 30.48 0)
