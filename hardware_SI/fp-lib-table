@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name "LTC4085EDEPBF")(type "KiCad")(uri "${KIPRJMOD}/LTC4085EDEPBF")(options "")(descr ""))
   (lib (name "MCP3021A5T-E_OT")(type "KiCad")(uri "${KIPRJMOD}/MCP3021A5T-E_OT")(options "")(descr ""))
+  (lib (name "TPS2111APWR")(type "KiCad")(uri "${KIPRJMOD}/TPS2111APWR")(options "")(descr ""))
 )
