@@ -307,7 +307,6 @@
     )
   )
 
-
   (junction (at 189.23 76.2) (diameter 0) (color 0 0 0 0)
     (uuid cab37cd3-58ef-4368-8e3c-f16420c9c934)
   )
@@ -1196,10 +1195,10 @@
       (reference "R2") (unit 1) (value "1.5k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/d17f886c-ddbc-4da5-b4ad-887fd41c7d7b/dbc53e7d-53cb-4dba-b818-6ad9e10764e3"
-      (reference "R3") (unit 1) (value "768k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+      (reference "R3") (unit 1) (value "750k") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/d17f886c-ddbc-4da5-b4ad-887fd41c7d7b/faab78e0-8dc3-48ed-8e35-3d50b0efc86c"
-      (reference "R4") (unit 1) (value "243k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+      (reference "R4") (unit 1) (value "240k") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/d17f886c-ddbc-4da5-b4ad-887fd41c7d7b/80c36a19-3f69-41a6-9db0-a7e3323e2ca2"
       (reference "R5") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
@@ -1244,7 +1243,7 @@
       (reference "R18") (unit 1) (value "2.2k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/d17f886c-ddbc-4da5-b4ad-887fd41c7d7b/f87b1477-f8e1-4be0-99f2-cc5ae488522d"
-      (reference "R19") (unit 1) (value "400") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+      (reference "R19") (unit 1) (value "470") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
     )
     (path "/d17f886c-ddbc-4da5-b4ad-887fd41c7d7b/ab8397f0-cb8b-42a3-97b6-8f2bb790bc88"
       (reference "SW1") (unit 1) (value "SW_SPDT") (footprint "Button_Switch_THT:SW_CuK_OS102011MA1QN1_SPDT_Angled")
