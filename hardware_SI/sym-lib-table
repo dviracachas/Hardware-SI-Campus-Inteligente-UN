@@ -4,4 +4,5 @@
   (lib (name "INVERTER")(type "Legacy")(uri "${KIPRJMOD}/INVERTER/INVERTER.lib")(options "")(descr ""))
   (lib (name "OMEGA2_")(type "Legacy")(uri "${KIPRJMOD}/OMEGA2/OMEGA2_.lib")(options "")(descr ""))
   (lib (name "MCP3021A5T-E_OT")(type "Legacy")(uri "${KIPRJMOD}/MCP3021A5T-E_OT/MCP3021A5T-E_OT.lib")(options "")(descr ""))
+  (lib (name "TPS2111APWR")(type "Legacy")(uri "${KIPRJMOD}/TPS2111APWR/TPS2111APWR.lib")(options "")(descr ""))
 )
