@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--link rel="icon" type="image/x-icon" href="./images/favicon.ico"/-->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    
+    <title>UN Campus</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <style>
+      @font-face {
+        font-family: AncizarItalic;
+        src:url("./fonts/AncizarSans-BoldItalic.otf");
+      }
+      @font-face {
+        font-family: AncizarRegular;
+        src:url("./fonts/AncizarSans-Regular.otf");
+      }
+      @font-face {
+        font-family: AncizarBold;
+        src:url("./fonts/AncizarSans-Bold.otf");
+      }
+      
+      @media (min-width: 375px){
+        .navbar-expand-sm .navbar-collapse {
+          display: flex!important;
+          flex-basis: auto;
+        }
+        .navbar-expand-sm .navbar-toggler {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  {% load static %}
+
+  <body style="background: #F2F9E0; font-family: AncizarRegular;">
+    
+    <nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); ">
+      <div class="container-fluid" style="width: 97%;">
+        <a class="navbar-brand" href="#app" style="font-family: AncizarItalic; font-size: 1.5rem">
+        <img src="./images/logo_verde_UN.png" style="width:40px; height:40px; margin-right: 5px; margin-bottom: 3px">Campus</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown" aria-expanded="false"
+            style="font-family: AncizarBold; font-size: 18px; background-color: #FFFFFF; color: #000000; 
+            border-radius:10px;  padding: 1px 6px 1px 3px; ">
+              <img src="./images/user_icon.png" style="width:25px; height:25px;">
+              Nombre usuario
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><button class="dropdown-item" type="button">Action</button></li>
+              <li><button class="dropdown-item" type="button">Another action</button></li>
+              <li><button class="dropdown-item" type="button">Something else here</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid" style="margin-bottom: 2rem;">
+      <div class="row" style="margin-bottom: 2rem;">
+        <div class="col-md-6" style="margin: 5rem auto  auto;">
+          <img class="img-fluid" src="{% static 'main.jpg' %}" name="app" id="app">
+          <div class="card">
+            <div class="card-body">
+              <form method="POST" action="{% url 'submitquery' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                  <input type="search" class='form-control' name="query" id="query" style="margin-bottom: 1rem;">
+                </div>
+                <div class="container-fluid" style="text-align : center">
+                  <input type="submit" class='btn btn-success'>
+                  <input type="reset" class="btn btn-danger">
+                </div>           
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+      {% if post %}
+      <div class="row" style="margin-bottom: 2rem;">
+        <div class="col-md-6" style="margin: 0 auto;">
+          {% if error %}
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Holy guacamole!</strong> We've encountered an error, please correct your entry and try again.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% else %}
+          <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            The result is: <strong>{{ ans }}</strong> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+      
+      <div class="col-md-6" style="margin: 0 auto 2rem;">
+        <p class="display-4" id="instructions" name="instructions">Instructions</p><hr>
+        <p class="lead">
+          <ol>
+            <li class="lead">Enter a mathematical expression in the text field.</li>
+            <li class="lead">Press the 'Submit' button to solve the problem.</li>
+            <li class="lead">Clear the text field easily using the 'Reset' button.</li>
+          </ol>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6" style="margin: 0 auto 2rem;">
+          <p class="display-4" id="expressions" name="expressions">Expressions</p><hr>
+          <p class="lead">The app supports the following expressions:</p>
+          <p class="lead">
+            <strong>+</strong> Adittion<br>
+            <strong>-</strong> Substraction<br>
+            <strong>*</strong> Multiplication<br>
+            <strong>/</strong> Division<br>
+            <strong>%</strong> Modulo<br>
+            <strong>()</strong> Parenthesis<br>
+            <strong>**</strong> Exponentiation<br>
+            <strong>//</strong> Floor Division<br>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-md-6" style="margin: 0 auto 2rem;">
+            <p class="display-4" id="about" name="about">About</p><hr>
+            <p class="lead">Calculator developed using Django, HTML and Boostrap.</p>
+          </div>
+        </div>
+        
+      <div class="container-fluid">
+        <div class="row">
+          <footer class="fixed-bottom bg-dark" style="color : white; text-align: center; height:22px;">
+            <p>Diseño de Sistemas Electrónicos ⚡</p>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+      
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

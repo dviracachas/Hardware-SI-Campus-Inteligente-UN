@@ -1,0 +1,111 @@
+/* Colores
+Dark cyan: hsl(185, 75%, 39%)
+Very dark desaturated blue: hsl(229, 23%, 23%)
+Dark grayish blue: hsl(227, 10%, 46%)
+
+Dark gray: hsl(0, 0%, 59%)
+*/
+
+
+
+body { 
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+    text-align: center;
+    background-color: hsla(77, 68%, 93%, 1); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+    grid-template-rows: 9fr 1fr;
+}
+
+.container {
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    background-color: olivedrab;
+    height: 450px;
+    width: 420px;
+    border-radius: 5%;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px hsl(185, 72%, 37%);
+}
+
+.banner {
+    background-image: url("./images/bg-pattern-card.svg");
+    
+    /*background-color: brown;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 38%;
+    
+    
+}
+
+.pic {
+    background-color: orchid;
+    background-image: url("./images/image-victor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin: auto;
+    position: relative;
+    top: 60%;
+}
+.info {
+    padding-top: 90px;
+    padding-bottom: 10px;
+    /*background-image: url("./images/bg-pattern-top.svg");*/
+    background-color:white;
+    color: hsl(0, 0%, 59%);
+    font-size: 20px;
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+.info strong {
+    color: hsl(227, 12%, 31%);
+}
+
+.city {
+    font-size: 16px;
+    color: hsl(0, 0%, 59%);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    
+    background-color: white;
+    justify-content: center;
+    align-content: center;
+    height: 25%;
+    position: relative;
+}
+
+.stats-text strong{
+    color: hsl(227, 12%, 31%);
+    font-size: 20px;
+    letter-spacing: 0px;
+}
+
+.stats-text {
+    color: hsl(0, 0%, 59%);
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+
+.atributtion a {
+    color: hsl(228, 45%, 44%);
+   
+}
+
+
+
