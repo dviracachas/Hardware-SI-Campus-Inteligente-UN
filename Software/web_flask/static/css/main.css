@@ -1,0 +1,120 @@
+html {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ADADC9;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+button {
+    background-color: #56446F;
+    border: 1px solid;
+    boder-color: #56446F;
+    border-radius: 20px;
+    color: white;
+    padding: 15px 32px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 90%;
+}
+
+button:hover {
+    background-color: #C4C4C4;
+}
+
+.frame {
+    margin: auto;
+    margin-top: 20px;
+    padding: 50px;
+    width: 90%;
+    align-items: center;
+}
+
+.title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.options{
+    padding-right:10px;
+    float: right;
+}
+
+#brand {
+    padding-left:10px;
+    font-size:40px;
+    font-weight: 500;
+}
+
+.content {
+    padding: 80px;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+}
+
+input[type=password], input[type=text], select {
+  width: 100%;
+  font-size:18px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #41E8FF;
+  border: 1px solid;
+  boder-color: #41E8FF;
+  border-radius: 20px;
+  color: white;
+  padding: 15px 32px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #C4C4C4;
+}
+
+table, td, th {
+    border: 1px solid #aaa;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
