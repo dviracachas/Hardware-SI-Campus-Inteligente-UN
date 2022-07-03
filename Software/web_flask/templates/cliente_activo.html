@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{{ url_for('static', filename='res/logo_t.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Sistema de Información</title>
+</head>
+<body>
+    <div class="frame">
+        <div class="title">
+            <img style="vertical-align:middle" src="{{ url_for('static', filename='res/logo_t.png') }}" width="40px" height="40px">
+            <span style="vertical-align:middle" id="brand">Sistema de Información</span>
+            <div class="options">
+                <a href="/cliente"> <img src="{{ url_for('static', filename='res/back.png') }}" width="40px" height="40px"></a>
+                <a href="/"> <img src="{{ url_for('static', filename='res/home.png') }}" width="40px" height="40px"></a>
+            </div>
+        </div>
+        <div class="content">
+            <h2>{{ msg }}</h2>
+            <h3>Bibliotecas</h3>
+            <table>
+                <tr>
+                    <th>ID Estudiante</th>
+                    <th>ID Libro</th>
+                    <th>Número Libro</th>
+                    <th>Biblioteca</th>
+                </tr>
+                {% for prestamo in bibliotecas %}
+                    <tr>
+                        <td>{{ prestamo.id_user }}</td>
+                        <td>{{ prestamo.id_book }}</td>
+                        <td>{{ prestamo.number_book }}</td>
+                        <td>{{ prestamo.number_biblio }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <h3>Bicicletas</h3>
+            <table>
+                <tr>
+                    <th>ID Estudiante</th>
+                    <th>ID Bici</th>
+                    <th>Punto Prestamo</th>
+                    <th>Daño</th>
+                </tr>
+                {% for prestamo in bicicletas %}
+                    <tr>
+                        <td>{{ prestamo.id_user }}</td>
+                        <td>{{ prestamo.id_bici }}</td>
+                        <td>{{ prestamo.pto_prestamo }}</td>
+                        <td>{{ prestamo.damage }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <h3>Comedores</h3>
+            <table>
+                <tr>
+                    <th>ID Estudiante</th>
+                    <th>Comedor seleccionado</th>
+                    <th>Menu seleccionado</th>
+                    <th>Franjka horaria</th>
+                    <th>Turno disp</th>
+                    <th>Turno actual</th>
+                </tr>
+                {% for prestamo in comedores %}
+                    <tr>
+                        <td>{{ prestamo.id_user }}</td>
+                        <td>{{ prestamo.comedor_sel }}</td>
+                        <td>{{ prestamo.menu_sel }}</td>
+                        <td>{{ prestamo.franja }}</td>
+                        <td>{{ prestamo.turno_disp }}</td>
+                        <td>{{ prestamo.turno_act }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>

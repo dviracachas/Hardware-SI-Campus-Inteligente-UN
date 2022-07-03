@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{{ url_for('static', filename='res/logo_t.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Ruta Dorada</title>
+</head>
+<body>
+    <div class="frame">
+        <div class="title">
+            <img style="vertical-align:middle" src="{{ url_for('static', filename='res/logo_t.png') }}" width="40px" height="40px">
+            <span style="vertical-align:middle" id="brand">Ruta Dorada</span>
+            <div class="options">
+                <a href="/"> <img src="{{ url_for('static', filename='res/home.png') }}" width="40px" height="40px"></a>
+            </div>
+        </div>
+        <div class="content">
+            {% if category == 'success' %}
+                <img src="{{ url_for('static', filename='res/green.png') }}" width="200px" height="200px">
+            {% endif  %}
+            {% if category == 'error' %}
+                <img src="{{ url_for('static', filename='res/red.png') }}" width="200px" height="200px">
+            {% endif  %}
+            <h2>{{ msg }}</h2>
+        </div>
+    </div>
+
+</body>
+</html>
