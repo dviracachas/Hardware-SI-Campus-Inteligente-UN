@@ -1,4 +1,5 @@
-from importlib.metadata import distribution
+from web_flask.app import db
+import sqlite3
 import paho.mqtt.client as mqtt
 import ast
 
@@ -35,16 +36,16 @@ def atenderSolicitudes(topic:str, mensaje):
     elif servicio == 'Bibliotecas':
         bibliotecas(tipoSolicitud, mensaje, turno)
     elif servicio == 'Comedores':
-        a = 1
-        #comedore(tipoSolicitud, mensaje, turno)
+        comedores(tipoSolicitud, mensaje, turno)
     else:
         print('Este servicio no existe')
 
 def bicicletas(tipoSolicitud, mensaje, turno):
     mensajeDecodificado = definirMensaje(mensaje)
     if tipoSolicitud == 'Petition':
-        print('Entró a petición ', turno)
-        confirm = {'LocalID':mensajeDecodificado['group'], 'PeID': str(turno)}
+        #print('Entró a petición ', turno)
+        confirm = {'LocalID': mensajeDecodificado['group'], 'PeID': str(turno)}
+        #client.publish('campus/Bicicletas/'+ tipoSolicitud, str(confirm))
     elif tipoSolicitud == 'Validate':
         print('Entró a validate ', turno)
         localID = mensajeDecodificado['LocalID']
@@ -78,6 +79,7 @@ def bibliotecas(tipoSolicitud, mensaje, turno):
     if tipoSolicitud == 'Petition':
         print('Entró a petición bibliotecas', turno)
         confirm = {'LocalID':mensajeDecodificado['group'], 'PeID': str(turno)}
+        #client.publish('campus/Bibliotecas/'+ tipoSolicitud, str(confirm))
     elif tipoSolicitud == 'Validate_book':
         print('Entró a Validate Book ', turno)
         idCarnet = mensajeDecodificado['ID']
@@ -99,6 +101,7 @@ def comedores(tipoSolicitud, mensaje, turno):
     if tipoSolicitud == 'Petition':
         print('Entró a petición bibliotecas', turno)
         confirm = {'LocalID':mensajeDecodificado['group'], 'PeID': str(turno)}
+        #client.publish('campus/Comedores/'+ tipoSolicitud, str(confirm))
     elif tipoSolicitud == 'NewTurn':
         localID = mensajeDecodificado['LocalID']
         idNumber = mensajeDecodificado['IDNumber']
@@ -132,10 +135,10 @@ def definirMensaje(mensaje):
 # Parametros para la conexión
 mqttServer = "127.0.0.1"
 port = 1883
-clientName = 'SistemaInformacion'
+#clientName = 'SistemaInformacion'
 topic = "campus/#"
 turno = 0
-client = mqtt.Client(clientName)
+client = mqtt.Client()
 print('conectando al Broker MQTT ', mqttServer)
 client.on_connect = on_connect
 client.on_message = on_message
