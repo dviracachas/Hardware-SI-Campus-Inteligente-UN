@@ -1,6 +1,4 @@
 from importlib.metadata import distribution
-from threading import local
-from tokenize import group
 import paho.mqtt.client as mqtt
 import ast
 
@@ -114,9 +112,17 @@ def comedores(tipoSolicitud, mensaje, turno):
         #Busca el comedor y envia las estadisticas
     elif tipoSolicitud == 'Confirmation':
         localID = mensajeDecodificado['LocalID']
-        confirmed = mensajeDecodificado['Confirmed']
-        restaurant = mensajeDecodificado['Restaurant']
-        #
+        idNumber = mensajeDecodificado['IDNumber']
+        #Retorna la confirmación del turno y el restaurante del mismo
+    elif tipoSolicitud == 'Payment':
+        localID = mensajeDecodificado['LocalID']
+        id = mensajeDecodificado['ID']
+    elif tipoSolicitud == 'Update':
+        localID = mensajeDecodificado['LocalID']
+        ticket = mensajeDecodificado['ticket']
+        comedor = mensajeDecodificado['Comedor']
+    else: 
+        print('Petición no existente en este servicio.')
 
 def definirMensaje(mensaje):
     dicMensaje = ast.literal_eval(mensaje)
